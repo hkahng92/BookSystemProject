@@ -6,11 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="eureka-service-registry-book-system" />
         <module name="Note-service" />
-        <module name="Book-service" />
-        <module name="config-server-book-system-project" />
         <module name="Note-queue-consumer" />
+        <module name="eureka-service-registry-book-system" />
+        <module name="Book-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

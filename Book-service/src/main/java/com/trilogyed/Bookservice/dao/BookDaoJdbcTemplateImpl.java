@@ -74,10 +74,12 @@ public class BookDaoJdbcTemplateImpl implements BookDao{
     @Override
     public void updateBook(Book book) {
         jdbcTemplate.update(UPDATE_BOOK_SQL,
+
                 book.getTitle(),
                 book.getAuthor(),
                 book.getBookId()
         );
+
     }
 
     @Override
