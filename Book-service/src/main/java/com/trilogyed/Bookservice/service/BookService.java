@@ -6,11 +6,14 @@ import com.trilogyed.Bookservice.viewmodel.BookViewModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+
 import java.util.ArrayList;
+
 import java.util.List;
 
 @Component
 public class BookService {
+
     BookDao dao;
     @Autowired
     public BookService(BookDao dao){
@@ -38,7 +41,7 @@ public class BookService {
 
     }
 
-    public BookViewModel newTask(BookViewModel bookViewModel) {
+    public BookViewModel newBook(BookViewModel bookViewModel) {
         Book book = new Book();
         //TaskViewModel tvm = new TaskViewModel();
         book.setTitle(bookViewModel.getTitle());
@@ -49,7 +52,7 @@ public class BookService {
         return bookViewModel;
     }
 
-    public void deleteTask(int id) {
+    public void deleteBook(int id) {
         dao.deleteBookById(id);
 
     }
@@ -72,5 +75,6 @@ public class BookService {
         bvm.setAuthor(book.getAuthor());
 
         return bvm;
+
     }
 }
