@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afc301a7-a4d7-4bd4-af03-6be1bcad7df9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/book-service.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/note-consumer.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/note-service.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server-book-system-project.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-service-registry-book-system.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Book-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Book-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Note-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Note-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-service.properties" beforeDir="false" afterPath="$PROJECT_DIR$/book-service.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note-service.properties" beforeDir="false" afterPath="$PROJECT_DIR$/note-service.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/config-server-book-system-project/config-server-book-system-project/target/" />
     <ignored path="$PROJECT_DIR$/eureka-service-registry-book-system/target/" />
@@ -35,21 +33,57 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/note-service.properties">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Note-service/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Book-service/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="55" selection-start-column="55" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/book-system-project.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/book-service.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
+            <state relative-caret-position="68">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/note-consumer.properties">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="43" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -60,7 +94,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/note-consumer.properties" />
         <option value="$PROJECT_DIR$/book-service.properties" />
+        <option value="$PROJECT_DIR$/note-service.properties" />
+        <option value="$PROJECT_DIR$/Note-service/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/Book-service/src/main/resources/application.properties" />
       </list>
     </option>
   </component>
@@ -95,6 +133,34 @@
             <path>
               <item name="BookSystemProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="BookSystemProject" type="462c0819:PsiDirectoryNode" />
+              <item name="Book-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookSystemProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookSystemProject" type="462c0819:PsiDirectoryNode" />
+              <item name="Book-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookSystemProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookSystemProject" type="462c0819:PsiDirectoryNode" />
+              <item name="Book-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookSystemProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookSystemProject" type="462c0819:PsiDirectoryNode" />
+              <item name="Book-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookSystemProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookSystemProject" type="462c0819:PsiDirectoryNode" />
               <item name="config-server-book-system-project" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -112,6 +178,27 @@
               <item name="BookSystemProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="BookSystemProject" type="462c0819:PsiDirectoryNode" />
               <item name="Note-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookSystemProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookSystemProject" type="462c0819:PsiDirectoryNode" />
+              <item name="Note-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookSystemProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookSystemProject" type="462c0819:PsiDirectoryNode" />
+              <item name="Note-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookSystemProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookSystemProject" type="462c0819:PsiDirectoryNode" />
+              <item name="Note-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -156,7 +243,7 @@
     <layout>
       <window_info id="Project Explorer" />
       <window_info id="Job Explorer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2573018" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.44367176" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -190,16 +277,46 @@
         <state relative-caret-position="-770" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/note-service.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/note-consumer.properties">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="43" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-system-project.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/book-service.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/note-service.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Note-service/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Book-service/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="55" selection-start-column="55" selection-end-column="55" />
         </state>
       </provider>
     </entry>
