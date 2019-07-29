@@ -93,6 +93,7 @@ public class BookDaoJdbcTemplateImpl implements BookDao{
         book.setTitle(rs.getString("title"));
         book.setAuthor(rs.getString("author"));
 
+
         return book;
     }
 }

@@ -6,44 +6,75 @@ import com.trilogyed.Bookservice.viewmodel.BookViewModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+
+import java.util.ArrayList;
+
 import java.util.List;
 
 @Component
 public class BookService {
 
-    BookDao bookDao;
-
+    BookDao dao;
     @Autowired
-    public BookService(BookDao bookDao){
-        this.bookDao=bookDao;
+    public BookService(BookDao dao){
+        this.dao = dao;
     }
-
-    public BookViewModel fetchBook(int id){
-        return null;
-    }
-    public List<BookViewModel> fetchAllBooks(){
-        return null;
-    }
-    public BookViewModel newBook(BookViewModel bookViewModel){
-        return null;
-    }
-    public void deleteBook(int id){
+    public BookViewModel fetchBook(int id) {
+        Book book = dao.getBookById(id);
+        if(book ==  null)
+            return null;
+        else
+            return buildBookViewModel(book);
 
     }
-    public BookViewModel updateBook(BookViewModel bookViewModel){
-        return null;
+
+    public List<BookViewModel> fetchAllBooks() {
+        List<Book> bookList = dao.getAllBooks();
+        List<BookViewModel> ViewModelList = new ArrayList<>();
+
+        bookList.stream()
+                .forEach(b -> {
+                    BookViewModel bvm = buildBookViewModel(b);
+                    ViewModelList.add(bvm);
+                });
+        return ViewModelList;
+
     }
 
-    private BookViewModel buildBookViewModel(Book book){
-        BookViewModel bookViewModel = new BookViewModel();
+    public BookViewModel newBook(BookViewModel bookViewModel) {
+        Book book = new Book();
+        //TaskViewModel tvm = new TaskViewModel();
+        book.setTitle(bookViewModel.getTitle());
+        book.setAuthor(bookViewModel.getAuthor());
+        book = dao.createBook(book);
         bookViewModel.setBookId(book.getBookId());
-        bookViewModel.setAuthor(book.getAuthor());
-        bookViewModel.setTitle(book.getTitle());
-        //there needs to be List<Note> in here
-        //List<Note> notes = noteDao.getAllNotes();
-        //bookViewModel.setNotes(notes);
 
         return bookViewModel;
+    }
+
+    public void deleteBook(int id) {
+        dao.deleteBookById(id);
+
+    }
+
+    public BookViewModel updateBook(BookViewModel bookViewModel) {
+        Book book = new Book();
+
+        book.setTitle(bookViewModel.getTitle());
+        book.setAuthor(bookViewModel.getAuthor());
+        book.setBookId(bookViewModel.getBookId());
+        dao.updateBook(book);
+
+        return bookViewModel;
+    }
+    // Helper methods
+    private BookViewModel buildBookViewModel (Book book){
+        BookViewModel bvm = new BookViewModel();
+        bvm.setBookId(book.getBookId());
+        bvm.setTitle(book.getTitle());
+        bvm.setAuthor(book.getAuthor());
+
+        return bvm;
 
     }
 }
