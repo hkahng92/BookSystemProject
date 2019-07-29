@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="eureka-service-registry-book-system" />
+        <module name="Note-service" />
+        <module name="Book-service" />
+        <module name="config-server-book-system-project" />
+        <module name="Note-queue-consumer" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Book-service" target="1.8" />
+      <module name="config-server-book-system-project" target="1.8" />
+      <module name="eureka-service-registry-book-system" target="1.8" />
+      <module name="Note-queue-consumer" target="1.8" />
+      <module name="Note-service" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Book-service" options="-parameters" />
+      <module name="Note-queue-consumer" options="-parameters" />
+      <module name="Note-service" options="-parameters" />
+      <module name="config-server-book-system-project" options="-parameters" />
+      <module name="eureka-service-registry-book-system" options="-parameters" />
+    </option>
+  </component>
+</project>
