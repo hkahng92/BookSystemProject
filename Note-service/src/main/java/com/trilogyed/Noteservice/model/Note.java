@@ -47,4 +47,5 @@ public class Note {
                 ", note='" + note + '\'' +
                 '}';
     }
+
 }

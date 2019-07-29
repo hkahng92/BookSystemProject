@@ -1,5 +1,6 @@
 package com.trilogyed.Noteservice.dao;
 
+
 import com.trilogyed.Noteservice.model.Note;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -96,4 +97,5 @@ public class NoteDaoJdbcTemplateImpl implements NoteDao {
 
         return note;
     }
+
 }
