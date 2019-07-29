@@ -2,6 +2,7 @@ package com.trilogyed.Noteservice.dao;
 
 
 import com.trilogyed.Noteservice.model.Note;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -15,8 +16,13 @@ public class NoteDaoJdbcTemplateImpl implements NoteDao {
 
     private JdbcTemplate jdbcTemplate;
 
+    @Autowired
+    public NoteDaoJdbcTemplateImpl(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
+
     private static final String INSERT_NOTE_SQL =
-            "insert into note(note_id,book_id,note) value(?,?,?)";
+            "insert into note(book_id,note) value(?,?)";
 
     private static final String SELECT_NOTE_SQL =
             "select * from note where note_id = ?";
@@ -77,7 +83,8 @@ public class NoteDaoJdbcTemplateImpl implements NoteDao {
         jdbcTemplate.update(
                 UPDATE_NOTE_SQL,
                 note.getBookId(),
-                note.getNote());
+                note.getNote(),
+                note.getNoteId());
 
     }
 
