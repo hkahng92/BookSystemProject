@@ -3,10 +3,14 @@ package com.trilogyed.Bookservice.service;
 import com.trilogyed.Bookservice.dao.BookDao;
 import com.trilogyed.Bookservice.dao.BookDaoJdbcTemplateImpl;
 import com.trilogyed.Bookservice.model.Book;
+import com.trilogyed.Bookservice.util.feign.NotesClient;
 import com.trilogyed.Bookservice.viewmodel.BookViewModel;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -21,14 +25,23 @@ import static org.mockito.Mockito.mock;
 @SpringBootTest
 public class BookServiceTest {
 
+    @Autowired
     BookDao bookDao;
+
+    @Autowired
     BookService service;
+
+    @Autowired
+    NotesClient client;
+
+    @Autowired
+    RabbitTemplate template;
 
     @Before
     public void setUp() throws Exception {
         setUpBookDaoMock();
 
-        service=new BookService(bookDao);
+        service = new BookService(template, bookDao, client);
     }
 
     private void setUpBookDaoMock(){

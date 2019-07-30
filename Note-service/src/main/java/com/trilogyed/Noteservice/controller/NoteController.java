@@ -18,13 +18,13 @@ import java.util.Random;
 
 public class NoteController {
 
-    @Autowired
-    NoteDao dao;
 
-    @Autowired
+    NoteDao dao;
     private final NoteQueueClient noteClient;
 
-    public NoteController(NoteQueueClient noteClient) {
+    @Autowired
+    public NoteController(NoteDao dao, NoteQueueClient noteClient) {
+        this.dao = dao;
         this.noteClient = noteClient;
     }
 
@@ -38,11 +38,12 @@ public class NoteController {
     }
 
     @RequestMapping(value = "/update", method = RequestMethod.PUT)
-    public void updateNoteFromBook(){
+    public List<Note> updateNoteFromBook(){
         List<Note> noteList = noteClient.sendToUpdateNote();
         for(Note note: noteList){
             dao.updateNote(note);
         }
+        return noteList;
     }
 
 
