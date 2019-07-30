@@ -17,7 +17,7 @@ public interface NotesClient {
         public List<Note> getNotesWithId();
 
         @RequestMapping(value = "/update", method = RequestMethod.PUT)
-        public List<Note> updateNoteFromBook();
+        public void updateNoteFromBook();
 
         @RequestMapping(value = "/notes/book/{book_id}", method = RequestMethod.GET)
         public List<Note> getNotesByBookId(int id);

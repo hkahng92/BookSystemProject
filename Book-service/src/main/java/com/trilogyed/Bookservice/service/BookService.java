@@ -87,14 +87,12 @@ public class BookService {
         for(Note n : b.getNoteList()){
             client.deleteNote(n.getNoteId());
         }
-
         bookDao.deleteBookById(b.getBookId());
-
     }
 
 
     @Transactional
-    public BookViewModel updateBook(BookViewModel bookViewModel) {
+    public void updateBook(BookViewModel bookViewModel) {
         Book book = new Book();
 
         book.setTitle(bookViewModel.getTitle());
@@ -104,9 +102,8 @@ public class BookService {
         System.out.println("Sending update message to the queue consumer...");
         rabbitTemplate.convertAndSend(EXCHANGE,ROUTING_KEY,bookViewModel.getNoteList());
         System.out.println("update Message Sent.");
-        bookViewModel.setNoteList(client.updateNoteFromBook());
-
-        return bookViewModel;
+        //bookViewModel.setNoteList(client.updateNoteFromBook());
+        client.updateNoteFromBook();
     }
     // Helper methods
     private BookViewModel buildBookViewModel (Book book){

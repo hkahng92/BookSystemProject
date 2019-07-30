@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import com.trilogyed.Bookservice.service.BookService;
 import com.trilogyed.Bookservice.viewmodel.BookViewModel;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,11 +29,11 @@ public class BookServiceController {
           this.client = client;
       }
 
-    @RequestMapping(value ="/Notelist",method = RequestMethod.GET)
-    @ResponseStatus(HttpStatus.OK)
-    public String bookCloud(){
-          return client.getNote();
-     }
+//    @RequestMapping(value ="/Notelist",method = RequestMethod.GET)
+//    @ResponseStatus(HttpStatus.OK)
+//    public String bookCloud(){
+//          return client.getNote();
+//     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
