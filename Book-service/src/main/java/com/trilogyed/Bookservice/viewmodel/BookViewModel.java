@@ -69,13 +69,4 @@ public class BookViewModel {
         return Objects.hash(getBookId(), getAuthor(), getTitle(), getNoteList());
     }
 
-    @Override
-    public String toString() {
-        return "BookViewModel{" +
-                "bookId=" + bookId +
-                ", author='" + author + '\'' +
-                ", title='" + title + '\'' +
-                ", noteList=" + noteList +
-                '}';
-    }
 }
