@@ -1,10 +1,9 @@
 package com.trilogyed.Bookservice.controller;
 
-import com.netflix.ribbon.proxy.annotation.Http;
-import com.trilogyed.Bookservice.model.Book;
 import com.trilogyed.Bookservice.service.BookService;
 import com.trilogyed.Bookservice.viewmodel.BookViewModel;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,30 +16,42 @@ public class BookServiceController {
 
     @Autowired
     BookService bookService;
-    //CRUD and get all controller
-//    Create Book
+
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public BookViewModel createBook(@RequestBody @Valid BookViewModel bookViewModel){
-        return bookService.newBook(bookViewModel);
+    public BookViewModel createBook(@RequestBody BookViewModel book){
+        return bookService.newBook(book);
     }
 
-//    Get Book
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public BookViewModel getBook(@PathVariable("id") int id){
-        BookViewModel bookViewModel = bookService.fetchBook(id);
-        //exception handling if necessary
-        return bookViewModel;
+        BookViewModel book = bookService.fetchBook(id);
+        if(book == null)
+            throw new IllegalArgumentException("Book could not be retrieved for id " + id);
+        return book;
     }
 
-//    Get All Books
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<BookViewModel> getAllBooks(){
-        List<BookViewModel> bookViewModelList = bookService.fetchAllBooks();
-        //exception handling if necessary
-        return bookViewModelList;
+        return bookService.fetchAllBooks();
+    }
+
+    @PutMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void updateBook(@PathVariable("id") int bookId, @RequestBody @Valid BookViewModel bookViewModel){
+        if(bookViewModel.getBookId()==0)
+            bookViewModel.setBookId(bookId);
+        if ((bookId != bookViewModel.getBookId())){
+            throw new IllegalArgumentException("Book ID on path must match the ID in the Book object");
+        }
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteBook(@PathVariable("id") int bookId){
+        bookService.deleteBook(bookId);
     }
 
 //    Update Book
