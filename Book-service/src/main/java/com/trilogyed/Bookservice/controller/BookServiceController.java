@@ -1,5 +1,11 @@
 package com.trilogyed.Bookservice.controller;
 
+import com.trilogyed.Bookservice.util.feign.NotesClient;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 import com.trilogyed.Bookservice.service.BookService;
 import com.trilogyed.Bookservice.viewmodel.BookViewModel;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,11 +17,25 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
+@RefreshScope
 @RequestMapping("/books")
 public class BookServiceController {
 
     @Autowired
+    private final NotesClient client;
+  
+    @Autowired
     BookService bookService;
+
+      BookServiceController(NotesClient client){
+          this.client = client;
+      }
+
+    @RequestMapping(value ="/Notelist",method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public String bookCloud(){
+          return client.getNote();
+     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
@@ -54,14 +74,4 @@ public class BookServiceController {
         bookService.deleteBook(bookId);
     }
 
-//    Update Book
-
-
-//
-//    Delete Book
-//===========
-//    URI: /books/{id}
-//    HTTP Method: DELETE
-//    RequestBody: None
-//    ResponseBody: None
 }

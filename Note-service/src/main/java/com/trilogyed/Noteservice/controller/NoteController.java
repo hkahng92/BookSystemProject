@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class NoteController {
 
@@ -37,4 +39,21 @@ public class NoteController {
             dao.updateNote(note);
         }
     }
+
+    private List<String> greetingList = new ArrayList<>();
+    // so we can randomly return a greeting
+    private Random rndGenerator = new Random();
+
+    @RequestMapping(value = "/note", method = RequestMethod.GET)
+    public String getNote() {
+        greetingList.add("HiYa!");
+        greetingList.add("Hello!!!");
+        greetingList.add("Howdy!");
+        greetingList.add("Greetings!");
+        greetingList.add("Hi!!!!!");
+        // select and return a random greeting
+        int whichGreeting = rndGenerator.nextInt(5);
+        return greetingList.get(whichGreeting);
+    }
+
 }
