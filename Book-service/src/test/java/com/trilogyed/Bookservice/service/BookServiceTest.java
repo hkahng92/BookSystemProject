@@ -3,7 +3,6 @@ package com.trilogyed.Bookservice.service;
 import com.trilogyed.Bookservice.dao.BookDao;
 import com.trilogyed.Bookservice.dao.BookDaoJdbcTemplateImpl;
 import com.trilogyed.Bookservice.model.Book;
-import com.trilogyed.Bookservice.model.Note;
 import com.trilogyed.Bookservice.viewmodel.BookViewModel;
 import org.junit.Before;
 import org.junit.Test;
