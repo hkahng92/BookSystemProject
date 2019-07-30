@@ -1,25 +1,30 @@
 package com.trilogyed.Noteservice.controller;
 
 import com.trilogyed.Noteservice.dao.NoteDao;
+import com.trilogyed.Noteservice.exception.NotFoundException;
 import com.trilogyed.Noteservice.model.Note;
 import com.trilogyed.Noteservice.util.feign.NoteQueueClient;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+
+
+import javax.validation.Valid;
 
 import java.util.ArrayList;
+
 import java.util.List;
 import java.util.Random;
 
 public class NoteController {
 
-    @Autowired
-    NoteDao dao;
 
-    @Autowired
+    NoteDao dao;
     private final NoteQueueClient noteClient;
 
-    public NoteController(NoteQueueClient noteClient) {
+    @Autowired
+    public NoteController(NoteDao dao, NoteQueueClient noteClient) {
+        this.dao = dao;
         this.noteClient = noteClient;
     }
 
@@ -33,27 +38,61 @@ public class NoteController {
     }
 
     @RequestMapping(value = "/update", method = RequestMethod.PUT)
-    public void updateNoteFromBook(){
+    public List<Note> updateNoteFromBook(){
         List<Note> noteList = noteClient.sendToUpdateNote();
         for(Note note: noteList){
             dao.updateNote(note);
         }
+        return noteList;
     }
 
-    private List<String> greetingList = new ArrayList<>();
-    // so we can randomly return a greeting
-    private Random rndGenerator = new Random();
 
-    @RequestMapping(value = "/note", method = RequestMethod.GET)
-    public String getNote() {
-        greetingList.add("HiYa!");
-        greetingList.add("Hello!!!");
-        greetingList.add("Howdy!");
-        greetingList.add("Greetings!");
-        greetingList.add("Hi!!!!!");
-        // select and return a random greeting
-        int whichGreeting = rndGenerator.nextInt(5);
-        return greetingList.get(whichGreeting);
+    @RequestMapping(value = "/notes", method = RequestMethod.POST)
+    @ResponseStatus(HttpStatus.CREATED)
+    public Note createNote(@RequestBody @Valid Note note){
+        note = dao.createNote(note);
+        return note;
     }
+
+    @RequestMapping(value = "/notes/{id}", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public Note getNote(@PathVariable(value = "id") int noteId){
+        Note note = dao.getNoteById(noteId);
+        if (note == null)
+            throw new NotFoundException("note could not be retrieved for id " + noteId);
+        return note;
+    }
+
+    @RequestMapping(value = "/notes", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public List<Note> getAllNotes(){
+        return dao.getAllNotes();
+    }
+
+    @RequestMapping(value = "/notes/book/{book_id}", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public List<Note> getNotesByBookId(@PathVariable(value = "book_id")int id){
+        return dao.getNotesByBook(id);
+    }
+
+    @RequestMapping(value = "notes/{id}", method = RequestMethod.PUT)
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void updateNote(@RequestBody @Valid Note note,
+                           @PathVariable(value = "id") int noteId){
+
+        if(note.getNoteId() == 0)
+            note.setNoteId(noteId);
+        if (noteId != note.getNoteId()){
+            throw new IllegalArgumentException("Note ID on path must match the ID in the note Object");
+        }
+        dao.updateNote(note);
+    }
+
+    @RequestMapping(value = "notes/{id}", method = RequestMethod.DELETE)
+    public void deleteNote(@PathVariable(value = "id") int noteId) {
+        dao.deleteNote(noteId);
+
+    }
+
 
 }
