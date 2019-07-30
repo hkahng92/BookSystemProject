@@ -2,9 +2,13 @@ package com.trilogyed.Bookservice.service;
 
 import com.trilogyed.Bookservice.dao.BookDao;
 import com.trilogyed.Bookservice.model.Book;
+import com.trilogyed.Bookservice.util.message.Note;
 import com.trilogyed.Bookservice.viewmodel.BookViewModel;
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 
 import java.util.ArrayList;
@@ -13,14 +17,22 @@ import java.util.List;
 
 @Component
 public class BookService {
+    public static final String EXCHANGE = "note-exchange";
+    public static final String ROUTING_KEY = "note.add.book.service";
 
-    BookDao dao;
     @Autowired
-    public BookService(BookDao dao){
-        this.dao = dao;
+    private RabbitTemplate rabbitTemplate;
+    private BookDao bookDao;
+
+    @Autowired
+    public BookService (RabbitTemplate rabbitTemplate, BookDao bookDao){
+        this.rabbitTemplate=rabbitTemplate;
+        this.bookDao=bookDao;
     }
+
+
     public BookViewModel fetchBook(int id) {
-        Book book = dao.getBookById(id);
+        Book book = bookDao.getBookById(id);
         if(book ==  null)
             return null;
         else
@@ -29,7 +41,7 @@ public class BookService {
     }
 
     public List<BookViewModel> fetchAllBooks() {
-        List<Book> bookList = dao.getAllBooks();
+        List<Book> bookList = bookDao.getAllBooks();
         List<BookViewModel> ViewModelList = new ArrayList<>();
 
         bookList.stream()
@@ -41,19 +53,28 @@ public class BookService {
 
     }
 
+    @Transactional
     public BookViewModel newBook(BookViewModel bookViewModel) {
         Book book = new Book();
-        //TaskViewModel tvm = new TaskViewModel();
+
         book.setTitle(bookViewModel.getTitle());
         book.setAuthor(bookViewModel.getAuthor());
-        book = dao.createBook(book);
+        book = bookDao.createBook(book);
         bookViewModel.setBookId(book.getBookId());
+
+        List<Note> noteList = bookViewModel.getNoteList();
+
+        System.out.println("Sending message to the queue consumer...");
+        rabbitTemplate.convertAndSend(EXCHANGE,ROUTING_KEY,noteList);
+        System.out.println("Message Sent.");
+
+        //bookViewModel.setNoteList(noteList);
 
         return bookViewModel;
     }
 
     public void deleteBook(int id) {
-        dao.deleteBookById(id);
+        bookDao.deleteBookById(id);
 
     }
 
@@ -63,7 +84,7 @@ public class BookService {
         book.setTitle(bookViewModel.getTitle());
         book.setAuthor(bookViewModel.getAuthor());
         book.setBookId(bookViewModel.getBookId());
-        dao.updateBook(book);
+        bookDao.updateBook(book);
 
         return bookViewModel;
     }

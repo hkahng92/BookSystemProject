@@ -1,6 +1,6 @@
 package com.trilogyed.Bookservice.viewmodel;
 
-import com.trilogyed.Bookservice.model.Note;
+import com.trilogyed.Bookservice.util.message.Note;
 
 import java.util.List;
 import java.util.Objects;
