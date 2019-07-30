@@ -2,12 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afc301a7-a4d7-4bd4-af03-6be1bcad7df9" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/Note-service/src/main/java/com/trilogyed/Noteservice/exception/NotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Note-service/src/main/java/com/trilogyed/Noteservice/controller/NoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Note-service/src/main/java/com/trilogyed/Noteservice/controller/NoteController.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/controller/BookServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/controller/BookServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-service-registry-book-system/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-service-registry-book-system/src/main/resources/application.properties" afterDir="false" />
+>>>>>>> 0f024d19de70d98a9198e4c87ad7bd79648b8bd6
     </list>
-    <ignored path="$PROJECT_DIR$/Note-queue-consumer/target/" />
-    <ignored path="$PROJECT_DIR$/eureka-service-registry-book-system/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +23,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
@@ -157,6 +164,8 @@
       </file>
     </leaf>
   </component>
+=======
+>>>>>>> 0f024d19de70d98a9198e4c87ad7bd79648b8bd6
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -168,6 +177,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -187,6 +197,8 @@
       </list>
     </option>
   </component>
+=======
+>>>>>>> 0f024d19de70d98a9198e4c87ad7bd79648b8bd6
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -194,16 +206,20 @@
       </MavenImportingSettings>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="ProjectFrameBounds">
     <option name="x" value="901" />
     <option name="y" value="78" />
     <option name="width" value="1035" />
     <option name="height" value="920" />
   </component>
+=======
+>>>>>>> 0f024d19de70d98a9198e4c87ad7bd79648b8bd6
   <component name="ProjectId" id="1OgusSnOdaX3CGaYlZnSmxGMNVK" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+<<<<<<< HEAD
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -584,6 +600,8 @@
       <pane id="Scope" />
     </panes>
   </component>
+=======
+>>>>>>> 0f024d19de70d98a9198e4c87ad7bd79648b8bd6
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -713,6 +731,7 @@
       <configuration name="NoteDaoTest" configurationId="JUnit" />
     </history-entry>
   </component>
+<<<<<<< HEAD
   <component name="ToolWindowManager">
     <frame x="721" y="63" width="828" height="736" extended-state="0" />
     <editor active="true" />
@@ -779,18 +798,15 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout-to-restore>
   </component>
+=======
+>>>>>>> 0f024d19de70d98a9198e4c87ad7bd79648b8bd6
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
@@ -811,6 +827,7 @@
       </map>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/dao/BookDao.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1055,4 +1072,6 @@
       </provider>
     </entry>
   </component>
+=======
+>>>>>>> 0f024d19de70d98a9198e4c87ad7bd79648b8bd6
 </project>

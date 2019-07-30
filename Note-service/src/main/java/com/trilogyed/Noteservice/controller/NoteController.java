@@ -8,8 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+
 import javax.validation.Valid;
+
+import java.util.ArrayList;
+
 import java.util.List;
+import java.util.Random;
 
 public class NoteController {
 
@@ -39,6 +44,7 @@ public class NoteController {
             dao.updateNote(note);
         }
     }
+
 
     @RequestMapping(value = "/notes", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
@@ -82,8 +88,10 @@ public class NoteController {
     }
 
     @RequestMapping(value = "notes/{id}", method = RequestMethod.DELETE)
-    public void deleteNote(@PathVariable(value = "id") int noteId){
+    public void deleteNote(@PathVariable(value = "id") int noteId) {
         dao.deleteNote(noteId);
+
     }
+
 
 }

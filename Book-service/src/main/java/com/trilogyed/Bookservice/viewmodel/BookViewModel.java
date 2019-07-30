@@ -1,6 +1,6 @@
 package com.trilogyed.Bookservice.viewmodel;
 
-import com.trilogyed.Bookservice.model.Note;
+import com.trilogyed.Bookservice.util.message.Note;
 
 import java.util.List;
 import java.util.Objects;
@@ -69,13 +69,4 @@ public class BookViewModel {
         return Objects.hash(getBookId(), getAuthor(), getTitle(), getNoteList());
     }
 
-    @Override
-    public String toString() {
-        return "BookViewModel{" +
-                "bookId=" + bookId +
-                ", author='" + author + '\'' +
-                ", title='" + title + '\'' +
-                ", noteList=" + noteList +
-                '}';
-    }
 }
