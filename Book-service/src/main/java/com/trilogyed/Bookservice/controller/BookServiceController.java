@@ -11,7 +11,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/books")
+@RequestMapping("/books")
 public class BookServiceController {
 
     @Autowired
@@ -54,5 +54,14 @@ public class BookServiceController {
         bookService.deleteBook(bookId);
     }
 
-    //CRUD and get all controller
+//    Update Book
+
+
+//
+//    Delete Book
+//===========
+//    URI: /books/{id}
+//    HTTP Method: DELETE
+//    RequestBody: None
+//    ResponseBody: None
 }
