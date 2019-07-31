@@ -3,9 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Book-service/Book-service.iml" filepath="$PROJECT_DIR$/Book-service/Book-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/BookSystem.iml" filepath="$PROJECT_DIR$/.idea/BookSystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/BookSystemProject.iml" filepath="$PROJECT_DIR$/.idea/BookSystemProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/Note-queue-consumer/Note-queue-consumer.iml" filepath="$PROJECT_DIR$/Note-queue-consumer/Note-queue-consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/Note-service/Note-service.iml" filepath="$PROJECT_DIR$/Note-service/Note-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config-server-book-system-project/config-server-book-system-project.iml" filepath="$PROJECT_DIR$/config-server-book-system-project/config-server-book-system-project.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-service-registry-book-system/eureka-service-registry-book-system.iml" filepath="$PROJECT_DIR$/eureka-service-registry-book-system/eureka-service-registry-book-system.iml" />
     </modules>
   </component>

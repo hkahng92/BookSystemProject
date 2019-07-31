@@ -9,6 +9,7 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 
@@ -62,7 +63,7 @@ public class BookService {
     }
 
     @Transactional
-    public BookViewModel newBook(BookViewModel bookViewModel) {
+    public BookViewModel newBook(BookViewModel bookViewModel) throws InterruptedException {
         Book book = new Book();
 
         book.setTitle(bookViewModel.getTitle());
@@ -71,12 +72,19 @@ public class BookService {
         bookViewModel.setBookId(book.getBookId());
 
         List<Note> noteList = bookViewModel.getNoteList();
+        for(Note n : noteList){
+            n.setBookId(book.getBookId());
+        }
 
         System.out.println("Sending create message to the queue consumer...");
         rabbitTemplate.convertAndSend(EXCHANGE,ROUTING_KEY,noteList);
         System.out.println("create Message Sent.");
-        bookViewModel.setNoteList(client.getNotesWithId());
-        //bookViewModel.setNoteList(noteList);
+
+       for (Note n : noteList){
+           n = client.createNote(n);
+       }
+       Thread.sleep(2000);
+        bookViewModel.setNoteList(client.getNotesByBookId(book.getBookId()));
 
         return bookViewModel;
     }
@@ -94,7 +102,7 @@ public class BookService {
 
 
     @Transactional
-    public BookViewModel updateBook(BookViewModel bookViewModel) {
+    public BookViewModel updateBook(BookViewModel bookViewModel) throws InterruptedException {
         Book book = new Book();
 
         book.setTitle(bookViewModel.getTitle());
@@ -104,8 +112,13 @@ public class BookService {
         System.out.println("Sending update message to the queue consumer...");
         rabbitTemplate.convertAndSend(EXCHANGE,ROUTING_KEY,bookViewModel.getNoteList());
         System.out.println("update Message Sent.");
-        bookViewModel.setNoteList(client.updateNoteFromBook());
 
+
+       for(Note n : bookViewModel.getNoteList()){
+           client.updateNote(n, n.getNoteId());
+       }
+       Thread.sleep(2000);
+        bookViewModel.setNoteList(client.getNotesByBookId(book.getBookId()));
         return bookViewModel;
     }
     // Helper methods

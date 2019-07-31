@@ -4,41 +4,63 @@ import java.util.Objects;
 
 public class Note {
 
-    private int noteId;
-    private int bookId;
+    private Integer noteId;
+    private Integer bookId;
     private String note;
 
-    public int getNoteId() {
+    public Note() {
+    }
+
+    public Note(Integer noteId, Integer bookId, String note) {
+        this.noteId = noteId;
+        this.bookId = bookId;
+        this.note = note;
+    }
+
+    public Note(Integer bookId, String note) {
+        this.bookId = bookId;
+        this.note = note;
+    }
+
+    public Integer getNoteId() {
         return noteId;
     }
-    public void setNoteId(int noteId) {
+
+    public void setNoteId(Integer noteId) {
         this.noteId = noteId;
     }
-    public int getBookId() {
+
+    public Integer getBookId() {
         return bookId;
     }
-    public void setBookId(int bookId) {
+
+    public void setBookId(Integer bookId) {
         this.bookId = bookId;
     }
+
     public String getNote() {
         return note;
     }
+
     public void setNote(String note) {
         this.note = note;
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Note)) return false;
         Note note1 = (Note) o;
-        return getNoteId() == note1.getNoteId() &&
-                getBookId() == note1.getBookId() &&
+        return getNoteId().equals(note1.getNoteId()) &&
+                getBookId().equals(note1.getBookId()) &&
                 getNote().equals(note1.getNote());
     }
+
     @Override
     public int hashCode() {
         return Objects.hash(getNoteId(), getBookId(), getNote());
     }
+
     @Override
     public String toString() {
         return "Note{" +
@@ -47,5 +69,4 @@ public class Note {
                 ", note='" + note + '\'' +
                 '}';
     }
-
 }

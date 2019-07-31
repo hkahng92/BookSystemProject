@@ -10,22 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 import java.util.List;
 
-@RestController
+
 public class NoteQueueController {
 
-    @Autowired
-    MessageListener msg;
 
 
-    @RequestMapping(value = "/createNotes", method = RequestMethod.POST)
-    public List<Note> sendToCreateNote(){
-        List<Note> note = new ArrayList<>();
-        return msg.recieveMessage(note);
-    }
 
-    @RequestMapping(value = "/updateNotes", method = RequestMethod.PUT)
-    public List<Note> sendToUpdateNote(){
-        List<Note> note = new ArrayList<>();
-        return msg.recieveMessage(note);
-    }
+
 }

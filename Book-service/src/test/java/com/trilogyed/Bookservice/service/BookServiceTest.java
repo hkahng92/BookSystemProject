@@ -72,7 +72,7 @@ public class BookServiceTest {
     }
 
     @Test
-    public void newFetchBook() {
+    public void newFetchBook() throws InterruptedException {
         BookViewModel bookViewModel = new BookViewModel();
         bookViewModel.setTitle("Title One");
         bookViewModel.setAuthor("Author One");
@@ -86,7 +86,7 @@ public class BookServiceTest {
     }
 
     @Test
-    public void fetchAllBooks() {
+    public void fetchAllBooks() throws InterruptedException {
         BookViewModel bookViewModel = new BookViewModel();
         bookViewModel.setTitle("Title One");
         bookViewModel.setAuthor("Author One");
@@ -104,7 +104,7 @@ public class BookServiceTest {
 //    }
 
     @Test
-    public void deleteBook() {
+    public void deleteBook() throws InterruptedException {
         BookViewModel bookViewModel = new BookViewModel();
         bookViewModel.setTitle("Title One");
         bookViewModel.setAuthor("Author One");
@@ -118,7 +118,7 @@ public class BookServiceTest {
     }
 
     @Test
-    public void updateBook() {
+    public void updateBook() throws InterruptedException {
         BookViewModel bookViewModel = new BookViewModel();
         bookViewModel.setBookId(1);
         bookViewModel.setTitle("Title TWO");
