@@ -45,7 +45,7 @@ public class MessageListener {
     @ResponseStatus(HttpStatus.OK)
     public List<Note> sendToCreateNote(){
         List<Note> note = new ArrayList<>();
-        note =  forCreate(note);
+        note = recieveMessage(note);
         System.out.println(note.toString());
         return note;
     }
@@ -58,4 +58,6 @@ public class MessageListener {
         System.out.println(note.toString());
         return note;
     }
+
+
 }

@@ -3,6 +3,7 @@ package com.trilogyed.Bookservice.service;
 import com.trilogyed.Bookservice.dao.BookDao;
 import com.trilogyed.Bookservice.dao.BookDaoJdbcTemplateImpl;
 import com.trilogyed.Bookservice.model.Book;
+import com.trilogyed.Bookservice.util.feign.NoteClientFeignImpl;
 import com.trilogyed.Bookservice.util.feign.NotesClient;
 import com.trilogyed.Bookservice.util.message.Note;
 import com.trilogyed.Bookservice.viewmodel.BookViewModel;
@@ -38,11 +39,15 @@ public class BookServiceTest {
     //@Autowired
     RabbitTemplate template;
 
+    @Autowired
+    NotesClient notesClient;
+
     @Before
     public void setUp() throws Exception {
         setUpBookDaoMock();
+        setUpNoteClient();
         template = mock(RabbitTemplate.class);
-        client = mock(NotesClient.class);
+
         service = new BookService(template, bookDao, client);
     }
 
@@ -102,26 +107,44 @@ public class BookServiceTest {
         assertEquals(1,bookViewModels.size());
     }
 
-    @Test
-    public void deleteBook() throws InterruptedException {
-        BookViewModel bookViewModel = new BookViewModel();
-        bookViewModel.setTitle("Title One");
-        bookViewModel.setAuthor("Author One");
+//    @Test
+//    public void deleteBook() throws InterruptedException {
+//        BookViewModel bookViewModel = new BookViewModel();
+//        bookViewModel.setTitle("Title One");
+//        bookViewModel.setAuthor("Author One");
+//
+//        service.newBook(bookViewModel);
+//
+//        service.deleteBook(bookViewModel.getBookId());
+//
+//        BookViewModel bookViewModel1 = service.fetchBook(bookViewModel.getBookId());
+//        assertNull(bookViewModel1);
+//    }
+//
+//    @Test
+//    public void updateBook() throws InterruptedException {
+//        BookViewModel bookViewModel = new BookViewModel();
+//        bookViewModel.setBookId(1);
+//        bookViewModel.setTitle("Title TWO");
+//        bookViewModel.setAuthor("Author TWO");
+//    }
 
-        service.newBook(bookViewModel);
+    private void setUpNoteClient(){
+        notesClient = mock(NoteClientFeignImpl.class);
+        Note noteMock = new Note();
+        noteMock.setBookId(1);
+        noteMock.setNote("Take two");
+        noteMock.setNoteId(25);
 
-        service.deleteBook(bookViewModel.getBookId());
+        Note note = new Note();
+        note.setBookId(1);
+        note.setNote("Take two");
 
-        BookViewModel bookViewModel1 = service.fetchBook(bookViewModel.getBookId());
-        assertNull(bookViewModel1);
-    }
+        List<Note> noteList = new ArrayList<>();
+        noteList.add(noteMock);
 
-    @Test
-    public void updateBook() throws InterruptedException {
-        BookViewModel bookViewModel = new BookViewModel();
-        bookViewModel.setBookId(1);
-        bookViewModel.setTitle("Title TWO");
-        bookViewModel.setAuthor("Author TWO");
+        doReturn(noteMock).when(notesClient).createNote(note);
+        doReturn(noteList).when(notesClient).getNotesByBookId(1);
     }
 //    @Test
 //    public void deleteBook() {
