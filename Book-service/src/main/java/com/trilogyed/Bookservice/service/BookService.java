@@ -95,14 +95,14 @@ public class BookService {
         for(Note n : b.getNoteList()){
             client.deleteNote(n.getNoteId());
         }
-
         bookDao.deleteBookById(b.getBookId());
-
     }
 
 
     @Transactional
+
     public BookViewModel updateBook(BookViewModel bookViewModel) throws InterruptedException {
+
         Book book = new Book();
 
         book.setTitle(bookViewModel.getTitle());
@@ -113,13 +113,13 @@ public class BookService {
         rabbitTemplate.convertAndSend(EXCHANGE,ROUTING_KEY,bookViewModel.getNoteList());
         System.out.println("update Message Sent.");
 
-
        for(Note n : bookViewModel.getNoteList()){
            client.updateNote(n, n.getNoteId());
        }
        Thread.sleep(2000);
         bookViewModel.setNoteList(client.getNotesByBookId(book.getBookId()));
         return bookViewModel;
+
     }
     // Helper methods
     private BookViewModel buildBookViewModel (Book book){

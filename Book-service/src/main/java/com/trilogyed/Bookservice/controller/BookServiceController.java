@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import com.trilogyed.Bookservice.service.BookService;
 import com.trilogyed.Bookservice.viewmodel.BookViewModel;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,9 +24,11 @@ public class BookServiceController {
     @Autowired
     BookService bookService;
 
+
     public BookServiceController(BookService bookService) {
         this.bookService = bookService;
     }
+
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
