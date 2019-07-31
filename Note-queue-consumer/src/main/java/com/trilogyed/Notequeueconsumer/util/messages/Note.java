@@ -16,14 +16,19 @@ public class Note {
         this.note = note;
     }
 
+    public Note(Integer bookId, String note) {
+        this.bookId = bookId;
+        this.note = note;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Note)) return false;
-        Note that = (Note) o;
-        return noteId.equals(that.noteId) &&
-                bookId.equals(that.bookId) &&
-                note.equals(that.note);
+        Note note1 = (Note) o;
+        return getNoteId().equals(note1.getNoteId()) &&
+                getBookId().equals(note1.getBookId()) &&
+                getNote().equals(note1.getNote());
     }
 
     @Override

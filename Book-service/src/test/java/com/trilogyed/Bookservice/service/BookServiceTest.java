@@ -75,7 +75,7 @@ public class BookServiceTest {
     }
 
     @Test
-    public void newFetchBook() {
+    public void newFetchBook() throws InterruptedException {
         BookViewModel bookViewModel = new BookViewModel();
         bookViewModel.setTitle("Title One");
         bookViewModel.setAuthor("Author One");
@@ -89,7 +89,7 @@ public class BookServiceTest {
     }
 
     @Test
-    public void fetchAllBooks() {
+    public void fetchAllBooks() throws InterruptedException {
         BookViewModel bookViewModel = new BookViewModel();
         bookViewModel.setTitle("Title One");
         bookViewModel.setAuthor("Author One");
@@ -102,10 +102,27 @@ public class BookServiceTest {
         assertEquals(1,bookViewModels.size());
     }
 
-//    @Test
-//    public void newBook() {
-//    }
+    @Test
+    public void deleteBook() throws InterruptedException {
+        BookViewModel bookViewModel = new BookViewModel();
+        bookViewModel.setTitle("Title One");
+        bookViewModel.setAuthor("Author One");
 
+        service.newBook(bookViewModel);
+
+        service.deleteBook(bookViewModel.getBookId());
+
+        BookViewModel bookViewModel1 = service.fetchBook(bookViewModel.getBookId());
+        assertNull(bookViewModel1);
+    }
+
+    @Test
+    public void updateBook() throws InterruptedException {
+        BookViewModel bookViewModel = new BookViewModel();
+        bookViewModel.setBookId(1);
+        bookViewModel.setTitle("Title TWO");
+        bookViewModel.setAuthor("Author TWO");
+    }
 //    @Test
 //    public void deleteBook() {
 //        BookViewModel bookViewModel = new BookViewModel();
@@ -119,7 +136,6 @@ public class BookServiceTest {
 //        BookViewModel bookViewModel1 = service.fetchBook(bookViewModel.getBookId());
 //        assertNull(bookViewModel1);
 //    }
-
 //    @Test
 //    public void updateBook() {
 //        BookViewModel bookViewModel = new BookViewModel();
@@ -129,7 +145,7 @@ public class BookServiceTest {
 //
 //        BookViewModel fromService = service.updateBook(bookViewModel);
 //        assertEquals(bookViewModel,fromService);
-//    }
+
 
 
 }

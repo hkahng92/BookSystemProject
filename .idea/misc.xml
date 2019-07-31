@@ -3,11 +3,12 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/config-server-book-system-project/config-server-book-system-project/pom.xml" />
+        <option value="$PROJECT_DIR$/config-server-book-system-project/pom.xml" />
         <option value="$PROJECT_DIR$/eureka-service-registry-book-system/pom.xml" />
         <option value="$PROJECT_DIR$/Note-queue-consumer/pom.xml" />
         <option value="$PROJECT_DIR$/Note-service/pom.xml" />
         <option value="$PROJECT_DIR$/Book-service/pom.xml" />
+        <option value="$PROJECT_DIR$/note-book-queue/pom.xml" />
       </list>
     </option>
   </component>

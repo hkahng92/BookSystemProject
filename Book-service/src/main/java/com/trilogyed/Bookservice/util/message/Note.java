@@ -3,9 +3,15 @@ package com.trilogyed.Bookservice.util.message;
 import java.util.Objects;
 
 public class Note {
-    private Integer bookId;
+
     private Integer noteId;
     private String note;
+    private Integer bookId;
+
+    public Note(String note, Integer bookId) {
+        this.note = note;
+        this.bookId = bookId;
+    }
 
     public Note(){}
 
@@ -14,6 +20,7 @@ public class Note {
         this.noteId=noteId;
         this.note=note;
     }
+
 
     public Integer getBookId() {
         return bookId;
@@ -51,15 +58,15 @@ public class Note {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof Note)) return false;
         Note note1 = (Note) o;
-        return Objects.equals(bookId, note1.bookId) &&
-                Objects.equals(noteId, note1.noteId) &&
-                Objects.equals(note, note1.note);
+        return getNoteId().equals(note1.getNoteId()) &&
+                getNote().equals(note1.getNote()) &&
+                getBookId().equals(note1.getBookId());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(bookId, noteId, note);
+        return Objects.hash(getNoteId(), getNote(), getBookId());
     }
 }

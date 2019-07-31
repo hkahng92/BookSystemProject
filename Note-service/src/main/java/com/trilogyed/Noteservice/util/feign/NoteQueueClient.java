@@ -11,9 +11,9 @@ import java.util.List;
 @FeignClient(name = "note-consumer")
 public interface NoteQueueClient {
 
-    @RequestMapping(value = "/createNotes", method = RequestMethod.POST)
+    @RequestMapping(value = "/createNotes", method = RequestMethod.GET)
     public List<Note> sendToCreateNote();
 
-    @RequestMapping(value ="/updateNotes", method = RequestMethod.PUT)
+    @RequestMapping(value ="/updateNotes", method = RequestMethod.GET)
     public List<Note> sendToUpdateNote();
 }

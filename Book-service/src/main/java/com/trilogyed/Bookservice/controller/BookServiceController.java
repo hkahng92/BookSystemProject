@@ -19,31 +19,26 @@ import java.util.List;
 @RequestMapping("/books")
 public class BookServiceController {
 
-    @Autowired
-    private final NotesClient client;
+
   
     @Autowired
     BookService bookService;
 
-      BookServiceController(NotesClient client){
-          this.client = client;
-      }
 
-//    @RequestMapping(value ="/Notelist",method = RequestMethod.GET)
-//    @ResponseStatus(HttpStatus.OK)
-//    public String bookCloud(){
-//          return client.getNote();
-//     }
+    public BookServiceController(BookService bookService) {
+        this.bookService = bookService;
+    }
+
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public BookViewModel createBook(@RequestBody BookViewModel book){
+    public BookViewModel createBook(@RequestBody BookViewModel book) throws InterruptedException {
         return bookService.newBook(book);
     }
 
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public BookViewModel getBook(@PathVariable("id") int id){
+    public BookViewModel getBook(@PathVariable("id") int id)throws InterruptedException {
         BookViewModel book = bookService.fetchBook(id);
         if(book == null)
             throw new IllegalArgumentException("Book could not be retrieved for id " + id);
@@ -52,23 +47,25 @@ public class BookServiceController {
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    public List<BookViewModel> getAllBooks(){
+    public List<BookViewModel> getAllBooks()throws InterruptedException {
         return bookService.fetchAllBooks();
     }
 
     @PutMapping("/{id}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void updateBook(@PathVariable("id") int bookId, @RequestBody @Valid BookViewModel bookViewModel){
+    @ResponseStatus(HttpStatus.OK)
+    public void updateBook(@PathVariable("id") int bookId, @RequestBody @Valid BookViewModel bookViewModel)throws InterruptedException {
         if(bookViewModel.getBookId()==0)
             bookViewModel.setBookId(bookId);
         if ((bookId != bookViewModel.getBookId())){
             throw new IllegalArgumentException("Book ID on path must match the ID in the Book object");
         }
+        bookService.updateBook(bookViewModel);
     }
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteBook(@PathVariable("id") int bookId){
+
         bookService.deleteBook(bookId);
     }
 

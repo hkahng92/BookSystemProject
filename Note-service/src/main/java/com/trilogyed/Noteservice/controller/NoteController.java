@@ -6,6 +6,7 @@ import com.trilogyed.Noteservice.model.Note;
 import com.trilogyed.Noteservice.util.feign.NoteQueueClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -15,7 +16,7 @@ import java.util.ArrayList;
 
 import java.util.List;
 import java.util.Random;
-
+@RestController
 public class NoteController {
 
 
@@ -28,7 +29,9 @@ public class NoteController {
         this.noteClient = noteClient;
     }
 
+
     @RequestMapping(value = "/consume", method = RequestMethod.POST)
+    @ResponseStatus(HttpStatus.CREATED)
     public List<Note> getNotesWithId(){
         List<Note> noteList = noteClient.sendToCreateNote();
         for (Note note: noteList){
@@ -38,6 +41,7 @@ public class NoteController {
     }
 
     @RequestMapping(value = "/update", method = RequestMethod.PUT)
+    @ResponseStatus(HttpStatus.OK)
     public List<Note> updateNoteFromBook(){
         List<Note> noteList = noteClient.sendToUpdateNote();
         for(Note note: noteList){
@@ -49,7 +53,7 @@ public class NoteController {
 
     @RequestMapping(value = "/notes", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
-    public Note createNote(@RequestBody @Valid Note note){
+    public Note createNote(@RequestBody Note note){
         note = dao.createNote(note);
         return note;
     }
