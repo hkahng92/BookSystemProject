@@ -40,6 +40,7 @@ public class BookServiceController {
     @ResponseStatus(HttpStatus.OK)
     public BookViewModel getBook(@PathVariable("id") int id)throws InterruptedException {
         BookViewModel book = bookService.fetchBook(id);
+
         if(book == null)
             throw new IllegalArgumentException("Book could not be retrieved for id " + id);
         return book;
