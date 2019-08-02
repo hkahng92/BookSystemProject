@@ -2,11 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c93f48ad-a3ba-4ac1-99e5-948aac6f70a1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/util/feign/NoteClientFeignImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_javaee_api_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Note-queue-consumer/src/main/java/com/trilogyed/Notequeueconsumer/util/feign/NotesClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Book-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Book-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/service/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/util/feign/NoteClientFeignImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/util/feign/NotesClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/util/feign/NotesClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/util/message/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/util/message/Note.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Book-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Book-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Book-service/src/test/java/com/trilogyed/Bookservice/service/BookServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Book-service/src/test/java/com/trilogyed/Bookservice/service/BookServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Note-queue-consumer/src/main/java/com/trilogyed/Notequeueconsumer/MessageListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/Note-queue-consumer/src/main/java/com/trilogyed/Notequeueconsumer/MessageListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Note-queue-consumer/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Note-queue-consumer/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Note-queue-consumer/src/main/java/com/trilogyed/Notequeueconsumer/NoteQueueConsumerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Note-queue-consumer/src/main/java/com/trilogyed/Notequeueconsumer/NoteQueueConsumerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Note-service/src/main/java/com/trilogyed/Noteservice/controller/NoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Note-service/src/main/java/com/trilogyed/Noteservice/controller/NoteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Note-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Note-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/config-server-book-system-project/target/" />
     <ignored path="$PROJECT_DIR$/eureka-service-registry-book-system/target/" />
@@ -21,78 +32,36 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="BookSystemProject" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/service/BookService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="85" column="26" lean-forward="true" selection-start-line="85" selection-start-column="26" selection-end-line="85" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Book-service/src/test/java/com/trilogyed/Bookservice/service/BookServiceTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1802">
-              <caret line="127" column="16" lean-forward="true" selection-start-line="127" selection-start-column="16" selection-end-line="127" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/dao/BookDaoJdbcTemplateImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="47" column="87" lean-forward="true" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="87" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/util/feign/NoteClientFeignImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="47" column="23" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#234#235#0" expanded="true" />
-                <element signature="e#261#262#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/util/feign/NotesClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+            <state relative-caret-position="170">
+              <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Book-service/src/test/java/com/trilogyed/Bookservice/BookServiceApplicationTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/Note-service/src/main/resources/bootstrap.properties">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Note-queue-consumer/src/main/java/com/trilogyed/Notequeueconsumer/MessageListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
+            <state relative-caret-position="67">
+              <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+              <folding>
+                <element signature="e#761#762#0" expanded="true" />
+                <element signature="e#797#798#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -112,10 +81,53 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Note-service/src/main/resources/application.properties">
+        <entry file="file://$PROJECT_DIR$/Book-service/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Note-queue-consumer/src/main/java/com/trilogyed/Notequeueconsumer/NoteQueueConsumerApplication.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="7" selection-end-column="45" />
+              <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/util/message/Note.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="57" column="50" selection-start-line="57" selection-start-column="50" selection-end-line="57" selection-end-column="50" />
+              <folding>
+                <element signature="e#1491#1492#0" expanded="true" />
+                <element signature="e#1563#1564#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/viewmodel/BookViewModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
+              <folding>
+                <element signature="e#822#823#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Note-service/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="14" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -137,7 +149,6 @@
       <list>
         <option value="$PROJECT_DIR$/Note-queue-consumer/pom.xml" />
         <option value="$PROJECT_DIR$/Book-service/pom.xml" />
-        <option value="$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/util/message/Note.java" />
         <option value="$PROJECT_DIR$/Note-queue-consumer/src/main/java/com/trilogyed/Notequeueconsumer/util/messages/Note.java" />
         <option value="$PROJECT_DIR$/Note-service/src/main/java/com/trilogyed/Noteservice/model/Note.java" />
         <option value="$PROJECT_DIR$/Note-service/src/main/java/com/trilogyed/Noteservice/util/feign/NoteQueueClient.java" />
@@ -147,17 +158,22 @@
         <option value="$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/BookServiceApplication.java" />
         <option value="$PROJECT_DIR$/Note-service/src/main/java/com/trilogyed/Noteservice/NoteServiceApplication.java" />
         <option value="$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/dao/BookDaoJdbcTemplateImpl.java" />
-        <option value="$PROJECT_DIR$/Note-service/src/main/java/com/trilogyed/Noteservice/controller/NoteController.java" />
         <option value="$PROJECT_DIR$/Note-service/src/main/java/com/trilogyed/Noteservice/dao/NoteDaoJdbcTemplateImpl.java" />
+        <option value="$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/controller/BookServiceController.java" />
+        <option value="$PROJECT_DIR$/Note-queue-consumer/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/util/feign/NoteClientFeignImpl.java" />
+        <option value="$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/util/feign/NoteClientImpl.java" />
+        <option value="$PROJECT_DIR$/Note-queue-consumer/src/main/java/com/trilogyed/Notequeueconsumer/util/feign/NoteClient.java" />
+        <option value="$PROJECT_DIR$/Note-queue-consumer/src/main/java/com/trilogyed/Notequeueconsumer/NoteQueueConsumerApplication.java" />
+        <option value="$PROJECT_DIR$/Note-service/src/main/java/com/trilogyed/Noteservice/controller/NoteController.java" />
+        <option value="$PROJECT_DIR$/Note-queue-consumer/src/main/java/com/trilogyed/Notequeueconsumer/util/feign/NotesClient.java" />
         <option value="$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/util/feign/NotesClient.java" />
+        <option value="$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/service/BookService.java" />
+        <option value="$PROJECT_DIR$/Book-service/src/test/java/com/trilogyed/Bookservice/service/BookServiceTest.java" />
+        <option value="$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/util/message/Note.java" />
         <option value="$PROJECT_DIR$/Book-service/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/Note-service/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/controller/BookServiceController.java" />
-        <option value="$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/service/BookService.java" />
         <option value="$PROJECT_DIR$/Note-queue-consumer/src/main/java/com/trilogyed/Notequeueconsumer/MessageListener.java" />
-        <option value="$PROJECT_DIR$/Note-queue-consumer/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/Book-service/src/test/java/com/trilogyed/Bookservice/service/BookServiceTest.java" />
-        <option value="$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/util/feign/NoteClientFeignImpl.java" />
       </list>
     </option>
   </component>
@@ -169,9 +185,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="105" />
-    <option name="width" value="1153" />
+    <option name="x" value="-8" />
+    <option name="y" value="30" />
+    <option name="width" value="995" />
     <option name="height" value="920" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -182,8 +198,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -254,6 +268,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Bookservice" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookSystemProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookSystemProject" type="462c0819:PsiDirectoryNode" />
+              <item name="Book-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Bookservice" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -276,6 +300,27 @@
               <item name="Bookservice" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
               <item name="feign" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookSystemProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookSystemProject" type="462c0819:PsiDirectoryNode" />
+              <item name="Book-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Bookservice" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookSystemProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookSystemProject" type="462c0819:PsiDirectoryNode" />
+              <item name="Book-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Bookservice" type="462c0819:PsiDirectoryNode" />
+              <item name="viewmodel" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BookSystemProject" type="b2602c69:ProjectViewProjectNode" />
@@ -332,6 +377,76 @@
             <path>
               <item name="BookSystemProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="BookSystemProject" type="462c0819:PsiDirectoryNode" />
+              <item name="config-server-book-system-project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookSystemProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookSystemProject" type="462c0819:PsiDirectoryNode" />
+              <item name="config-server-book-system-project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookSystemProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookSystemProject" type="462c0819:PsiDirectoryNode" />
+              <item name="config-server-book-system-project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookSystemProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookSystemProject" type="462c0819:PsiDirectoryNode" />
+              <item name="config-server-book-system-project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookSystemProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookSystemProject" type="462c0819:PsiDirectoryNode" />
+              <item name="config-server-book-system-project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="configserverbooksystemproject" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookSystemProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookSystemProject" type="462c0819:PsiDirectoryNode" />
+              <item name="eureka-service-registry-book-system" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookSystemProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookSystemProject" type="462c0819:PsiDirectoryNode" />
+              <item name="eureka-service-registry-book-system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookSystemProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookSystemProject" type="462c0819:PsiDirectoryNode" />
+              <item name="eureka-service-registry-book-system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookSystemProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookSystemProject" type="462c0819:PsiDirectoryNode" />
+              <item name="eureka-service-registry-book-system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookSystemProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookSystemProject" type="462c0819:PsiDirectoryNode" />
+              <item name="eureka-service-registry-book-system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="eurekaserviceregistrybooksystem" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookSystemProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookSystemProject" type="462c0819:PsiDirectoryNode" />
               <item name="Note-queue-consumer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -363,6 +478,38 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Notequeueconsumer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookSystemProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookSystemProject" type="462c0819:PsiDirectoryNode" />
+              <item name="Note-queue-consumer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Notequeueconsumer" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookSystemProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookSystemProject" type="462c0819:PsiDirectoryNode" />
+              <item name="Note-queue-consumer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Notequeueconsumer" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+              <item name="feign" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookSystemProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookSystemProject" type="462c0819:PsiDirectoryNode" />
+              <item name="Note-queue-consumer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Notequeueconsumer" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+              <item name="messages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BookSystemProject" type="b2602c69:ProjectViewProjectNode" />
@@ -435,16 +582,25 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="BookSystemProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookSystemProject" type="462c0819:PsiDirectoryNode" />
+              <item name="Note-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Javabootcamp/U2-M1-Summative-Nanna-Ofeoritse" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RunDashboard">
@@ -459,13 +615,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BookServiceTest">
+  <component name="RunManager" selected="Application.BookServiceApplication">
     <configuration name="BookServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.trilogyed.Bookservice.BookServiceApplication" />
       <module name="Book-service" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.trilogyed.Bookservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigServerBookSystemProjectApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.configserverbooksystemproject.ConfigServerBookSystemProjectApplication" />
+      <module name="config-server-book-system-project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.configserverbooksystemproject.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -512,28 +681,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Book-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.trilogyed.Bookservice.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.trilogyed.Bookservice.service" />
-      <option name="MAIN_CLASS_NAME" value="com.trilogyed.Bookservice.service.BookServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BookServiceTest" />
-        <item itemvalue="Application.BookServiceApplication" />
-        <item itemvalue="Application.NoteServiceApplication" />
         <item itemvalue="Application.NoteQueueConsumerApplication" />
+        <item itemvalue="Application.NoteServiceApplication" />
+        <item itemvalue="Application.BookServiceApplication" />
         <item itemvalue="Application.EurekaServiceRegistryBookSystemApplication" />
+        <item itemvalue="Application.ConfigServerBookSystemProjectApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -551,7 +705,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BookServiceTest - 2019.07.31 at 11h 12m 11s.xml">
+    <history-entry file="BookServiceTest - 2019.08.01 at 20h 00m 09s.xml">
+      <configuration name="BookServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookServiceTest - 2019.08.01 at 20h 17m 26s.xml">
+      <configuration name="BookServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookServiceTest_newFetchBook - 2019.08.01 at 20h 17m 36s.xml">
+      <configuration name="BookServiceTest.newFetchBook" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookServiceTest - 2019.08.01 at 20h 20m 25s.xml">
+      <configuration name="BookServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookServiceTest_newFetchBook - 2019.08.01 at 20h 21m 18s.xml">
+      <configuration name="BookServiceTest.newFetchBook" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookServiceTest_newFetchBook - 2019.08.01 at 20h 22m 20s.xml">
+      <configuration name="BookServiceTest.newFetchBook" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookServiceTest_newFetchBook - 2019.08.01 at 20h 23m 25s.xml">
+      <configuration name="BookServiceTest.newFetchBook" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookServiceTest - 2019.08.01 at 20h 38m 15s.xml">
+      <configuration name="BookServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookServiceTest - 2019.08.01 at 20h 38m 24s.xml">
+      <configuration name="BookServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookServiceTest - 2019.08.01 at 21h 19m 28s.xml">
       <configuration name="BookServiceTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -559,66 +740,66 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="Project Explorer" weight="0.3295302" />
-      <window_info id="UI Designer" />
-      <window_info id="Job Explorer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" sideWeight="0.5021097" side_tool="true" weight="0.3671141" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.3671141" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.31342283" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Console" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.3286119" />
+      <window_info id="Project Explorer" order="2" weight="0.3295302" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Designer" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Job Explorer" order="6" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Favorites" order="8" sideWeight="0.5021097" side_tool="true" weight="0.3671141" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3753541" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.34135976" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="bottom" id="Console" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
     <layout-to-restore>
-      <window_info id="Image Layers" order="0" />
-      <window_info id="Designer" order="1" />
-      <window_info id="Project Explorer" order="2" />
-      <window_info id="UI Designer" order="3" />
-      <window_info id="Job Explorer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.3671141" />
-      <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Console" order="0" />
-      <window_info anchor="bottom" id="Version Control" order="1" />
-      <window_info anchor="bottom" id="Terminal" order="2" />
-      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="4" weight="0.3286119" />
-      <window_info anchor="bottom" id="Message" order="5" />
-      <window_info anchor="bottom" id="Find" order="6" />
-      <window_info anchor="bottom" id="Run" order="7" visible="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.39943343" />
-      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="11" />
-      <window_info anchor="right" id="Palette" order="0" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Theme Preview" order="2" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.31342283" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Project Explorer" order="2" weight="0.3295302" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Designer" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Job Explorer" order="6" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Favorites" order="8" sideWeight="0.5021097" side_tool="true" weight="0.3671141" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3753541" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.34135976" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Console" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3286119" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout-to-restore>
   </component>
   <component name="XDebuggerManager">
@@ -626,7 +807,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Note-queue-consumer/src/main/java/com/trilogyed/Notequeueconsumer/MessageListener.java</url>
-          <line>20</line>
+          <line>29</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
@@ -648,28 +829,46 @@
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/util/feign/NotesClient.java</url>
+          <line>34</line>
+          <properties />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Book-service/src/test/java/com/trilogyed/Bookservice/service/BookServiceTest.java</url>
+          <line>144</line>
+          <properties />
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Book-service/src/test/java/com/trilogyed/Bookservice/service/BookServiceTest.java</url>
+          <line>147</line>
+          <properties />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="book" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>book</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/viewmodel/BookViewModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/model/Book.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Note-queue-consumer/src/main/java/com/trilogyed/Notequeueconsumer/util/messages/Note.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -700,13 +899,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Note-queue-consumer/src/main/java/com/trilogyed/Notequeueconsumer/NoteQueueConsumerApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -745,20 +937,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/note-book-queue/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="67" column="21" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Note-queue-consumer/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="67" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/note-book-queue/pom.xml" />
     <entry file="file://$PROJECT_DIR$/Book-service/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -770,17 +949,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
           <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/BookServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="27" selection-end-column="5" />
-          <folding>
-            <element signature="e#1049#1050#0" expanded="true" />
-            <element signature="e#1097#1098#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -798,13 +966,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Note-service/src/main/java/com/trilogyed/Noteservice/dao/NoteDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Note-service/src/main/java/com/trilogyed/Noteservice/NoteServiceApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
@@ -814,38 +975,6 @@
             <element signature="e#1063#1064#0" expanded="true" />
             <element signature="e#1111#1112#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/util/message/Note.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="58" column="37" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
-          <folding>
-            <element signature="e#1473#1474#0" expanded="true" />
-            <element signature="e#1545#1546#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Note-service/src/main/java/com/trilogyed/Noteservice/dao/NoteDaoJdbcTemplateImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="85" column="32" selection-start-line="85" selection-start-column="32" selection-end-line="85" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Note-service/src/main/java/com/trilogyed/Noteservice/controller/NoteController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Book-service/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -860,34 +989,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Note-queue-consumer/src/main/java/com/trilogyed/Notequeueconsumer/MessageListener.java">
+    <entry file="file://$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/dao/BookDaoJdbcTemplateImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
+        <state relative-caret-position="412">
+          <caret line="47" column="87" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="87" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Note-queue-consumer/src/main/resources/bootstrap.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Note-queue-consumer/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/util/feign/NoteClientFeignImpl.java" />
+    <entry file="file://$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/util/feign/NoteClientImpl.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="45" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
+        <state relative-caret-position="111">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Note-service/src/main/resources/application.properties">
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="7" selection-end-column="45" />
+        <state relative-caret-position="95">
+          <caret line="177" selection-start-line="177" selection-end-line="177" />
+          <folding>
+            <element signature="e#6484#6648#0" expanded="true" />
+            <element signature="e#6647#6648#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/service/BookService.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/2.23.4/mockito-core-2.23.4.jar!/org/mockito/internal/creation/bytebuddy/MockMethodInterceptor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/dao/BookDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/2.23.4/mockito-core-2.23.4.jar!/org/mockito/internal/stubbing/StubberImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/2.23.4/mockito-core-2.23.4.jar!/org/mockito/Mockito.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1547">
+          <caret line="135" selection-start-line="135" selection-end-line="135" />
+          <folding>
+            <element signature="e#4587#4588#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Note-queue-consumer/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="85" column="26" lean-forward="true" selection-start-line="85" selection-start-column="26" selection-end-line="85" selection-end-column="26" />
+          <caret line="43" column="21" lean-forward="true" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/BookServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+          <folding>
+            <element signature="e#1049#1050#0" expanded="true" />
+            <element signature="e#1097#1098#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -898,36 +1079,131 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/dao/BookDaoJdbcTemplateImpl.java">
+    <entry file="file://$PROJECT_DIR$/Note-service/src/main/java/com/trilogyed/Noteservice/dao/NoteDaoJdbcTemplateImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="47" column="87" lean-forward="true" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="87" />
+        <state relative-caret-position="661">
+          <caret line="85" column="32" selection-start-line="85" selection-start-column="32" selection-end-line="85" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/util/feign/NotesClient.java">
+    <entry file="file://$PROJECT_DIR$/Note-service/src/main/java/com/trilogyed/Noteservice/controller/NoteController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+        <state relative-caret-position="510">
+          <caret line="60" selection-start-line="60" selection-end-line="62" selection-end-column="63" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/util/feign/NoteClientFeignImpl.java">
+    <entry file="file://$PROJECT_DIR$/Note-service/src/main/java/com/trilogyed/Noteservice/dao/NoteDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="23" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
+        <state relative-caret-position="68">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Note-queue-consumer/src/main/java/com/trilogyed/Notequeueconsumer/util/feign/NotesClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#234#235#0" expanded="true" />
-            <element signature="e#261#262#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/service/BookService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="107" column="75" selection-start-line="107" selection-start-column="75" selection-end-line="107" selection-end-column="75" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Book-service/src/test/java/com/trilogyed/Bookservice/service/BookServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1802">
-          <caret line="127" column="16" lean-forward="true" selection-start-line="127" selection-start-column="16" selection-end-line="127" selection-end-column="16" />
+        <state relative-caret-position="1394">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Note-queue-consumer/src/main/java/com/trilogyed/Notequeueconsumer/util/messages/Note.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/util/message/Note.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="57" column="50" selection-start-line="57" selection-start-column="50" selection-end-line="57" selection-end-column="50" />
+          <folding>
+            <element signature="e#1491#1492#0" expanded="true" />
+            <element signature="e#1563#1564#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/viewmodel/BookViewModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="e#822#823#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Book-service/src/main/java/com/trilogyed/Bookservice/util/feign/NotesClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Note-service/src/main/resources/bootstrap.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Book-service/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Note-queue-consumer/src/main/java/com/trilogyed/Notequeueconsumer/NoteQueueConsumerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Note-queue-consumer/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="45" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Note-queue-consumer/src/main/resources/bootstrap.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Note-service/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Note-queue-consumer/src/main/java/com/trilogyed/Notequeueconsumer/MessageListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+          <folding>
+            <element signature="e#761#762#0" expanded="true" />
+            <element signature="e#797#798#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

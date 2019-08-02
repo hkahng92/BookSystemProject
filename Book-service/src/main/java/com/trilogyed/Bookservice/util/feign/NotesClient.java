@@ -3,6 +3,7 @@ package com.trilogyed.Bookservice.util.feign;
 import com.trilogyed.Bookservice.util.message.Note;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,11 +13,15 @@ import java.util.List;
 @FeignClient(name = "note-service")
 public interface NotesClient {
 
-        @RequestMapping(value = "/consume", method = RequestMethod.POST)
-        public List<Note> getNotesWithId();
+        @RequestMapping(value = "/notes/{id}", method = RequestMethod.GET)
+        public Note getNote(@PathVariable(value = "id") int noteId);
 
-        @RequestMapping(value = "/update", method = RequestMethod.PUT)
-        public void updateNoteFromBook();
+        // to be removed
+//        @RequestMapping(value = "/consume", method = RequestMethod.POST)
+//        public List<Note> getNotesWithId();
+//
+//        @RequestMapping(value = "/update", method = RequestMethod.PUT)
+//        public void updateNoteFromBook();
 
         @RequestMapping(value = "/notes/book/{book_id}", method = RequestMethod.GET)
         public List<Note> getNotesByBookId(@PathVariable(value = "book_id") int id);
@@ -30,4 +35,5 @@ public interface NotesClient {
         @RequestMapping(value = "notes/{id}", method = RequestMethod.PUT)
         public void updateNote(@RequestBody Note note,
                                @PathVariable(value = "id") int noteId);
+
 }

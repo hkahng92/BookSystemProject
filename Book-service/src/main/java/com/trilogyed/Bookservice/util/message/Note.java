@@ -55,15 +55,16 @@ public class Note {
                 '}';
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Note)) return false;
-        Note note1 = (Note) o;
-        return getNoteId().equals(note1.getNoteId()) &&
-                getNote().equals(note1.getNote()) &&
-                getBookId().equals(note1.getBookId());
-    }
+    // to be removed this was the only problem lol
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (!(o instanceof Note)) return false;
+//        Note note1 = (Note) o;
+//        return getNoteId().equals(note1.getNoteId()) &&
+//                getNote().equals(note1.getNote()) &&
+//                getBookId().equals(note1.getBookId());
+//    }
 
     @Override
     public int hashCode() {
