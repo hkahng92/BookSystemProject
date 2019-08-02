@@ -29,26 +29,26 @@ public class NoteController {
         this.noteClient = noteClient;
     }
 
-
-    @RequestMapping(value = "/consume", method = RequestMethod.POST)
-    @ResponseStatus(HttpStatus.CREATED)
-    public List<Note> getNotesWithId(){
-        List<Note> noteList = noteClient.sendToCreateNote();
-        for (Note note: noteList){
-            note = dao.createNote(note);
-        }
-        return noteList;
-    }
-
-    @RequestMapping(value = "/update", method = RequestMethod.PUT)
-    @ResponseStatus(HttpStatus.OK)
-    public List<Note> updateNoteFromBook(){
-        List<Note> noteList = noteClient.sendToUpdateNote();
-        for(Note note: noteList){
-            dao.updateNote(note);
-        }
-        return noteList;
-    }
+//to be removed
+//    @RequestMapping(value = "/consume", method = RequestMethod.POST)
+//    @ResponseStatus(HttpStatus.CREATED)
+//    public List<Note> getNotesWithId(){
+//        List<Note> noteList = noteClient.sendToCreateNote();
+//        for (Note note: noteList){
+//            note = dao.createNote(note);
+//        }
+//        return noteList;
+//    }
+//
+//    @RequestMapping(value = "/update", method = RequestMethod.PUT)
+//    @ResponseStatus(HttpStatus.OK)
+//    public List<Note> updateNoteFromBook(){
+//        List<Note> noteList = noteClient.sendToUpdateNote();
+//        for(Note note: noteList){
+//            dao.updateNote(note);
+//        }
+//        return noteList;
+//    }
 
 
     @RequestMapping(value = "/notes", method = RequestMethod.POST)

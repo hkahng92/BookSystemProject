@@ -22,12 +22,16 @@ public class BookService {
     public static final String EXCHANGE = "note-exchange";
     public static final String ROUTING_KEY = "note.add.book.service";
 
-
+    @Autowired
     private RabbitTemplate rabbitTemplate;
+
     private BookDao bookDao;
-    private final NotesClient client;
+
 
     @Autowired
+    private final NotesClient client;
+
+
     public BookService(RabbitTemplate rabbitTemplate, BookDao bookDao, NotesClient client){
         this.rabbitTemplate=rabbitTemplate;
         this.bookDao=bookDao;
@@ -69,24 +73,42 @@ public class BookService {
         book.setTitle(bookViewModel.getTitle());
         book.setAuthor(bookViewModel.getAuthor());
         book = bookDao.createBook(book);
+
         bookViewModel.setBookId(book.getBookId());
 
         List<Note> noteList = bookViewModel.getNoteList();
-        for(Note n : noteList){
-            n.setBookId(book.getBookId());
+        if(noteList == null){
+            return bookViewModel;
+        } else {
+            List<Note> notelistWithId = new ArrayList<>();
+
+            for (Note n : noteList) {
+                n.setBookId(book.getBookId());
+                notelistWithId.add(n);
+
+            }
+            bookViewModel.setNoteList(notelistWithId);
+
+            System.out.println("Sending create message to the queue consumer...");
+            rabbitTemplate.convertAndSend(EXCHANGE, ROUTING_KEY, bookViewModel.getNoteList());
+            System.out.println("create Message Sent.");
+
+            //to be removed because the consumer is now creating the notes
+            // a slow method process is simulated next
+//            List<Note> noteList1 = new ArrayList<>();
+//
+//            bookViewModel.getNoteList().stream()
+//                    .forEach(n -> {
+//                        n = client.createNote(n);
+//                        noteList1.add(n);
+//                    });
+//
+//            bookViewModel.setNoteList(noteList1);
+            Thread.sleep(2000);
+            bookViewModel.setNoteList(client.getNotesByBookId(bookViewModel.getBookId()));
         }
+            return bookViewModel;
 
-        System.out.println("Sending create message to the queue consumer...");
-        rabbitTemplate.convertAndSend(EXCHANGE,ROUTING_KEY,noteList);
-        System.out.println("create Message Sent.");
-
-       for (Note n : noteList){
-           n = client.createNote(n);
-       }
-       Thread.sleep(2000);
-        bookViewModel.setNoteList(client.getNotesByBookId(book.getBookId()));
-
-        return bookViewModel;
     }
 
     @Transactional
