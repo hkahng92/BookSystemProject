@@ -135,9 +135,10 @@ public class BookService {
         rabbitTemplate.convertAndSend(EXCHANGE,ROUTING_KEY,bookViewModel.getNoteList());
         System.out.println("update Message Sent.");
 
-       for(Note n : bookViewModel.getNoteList()){
-           client.updateNote(n, n.getNoteId());
-       }
+        // to be removed queue now handles the update will optimize this later
+//       for(Note n : bookViewModel.getNoteList()){
+//           client.updateNote(n, n.getNoteId());
+//       }
        Thread.sleep(2000);
         bookViewModel.setNoteList(client.getNotesByBookId(book.getBookId()));
         return bookViewModel;
