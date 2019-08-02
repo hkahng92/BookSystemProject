@@ -46,7 +46,12 @@ public class BookService {
             return null;
         else {
             BookViewModel b = buildBookViewModel(book);
-            b.setNoteList(client.getNotesByBookId(id));
+            if(client.getNotesByBookId(id) == null){
+                //do nothing
+            }else {
+
+                b.setNoteList(client.getNotesByBookId(id));
+            }
             return b;
         }
     }
@@ -54,15 +59,21 @@ public class BookService {
     @Transactional
     public List<BookViewModel> fetchAllBooks() {
         List<Book> bookList = bookDao.getAllBooks();
-        List<BookViewModel> ViewModelList = new ArrayList<>();
+        List<BookViewModel> viewModelList = new ArrayList<>();
 
         bookList.stream()
                 .forEach(b -> {
                     BookViewModel bvm = buildBookViewModel(b);
-                    bvm.setNoteList(client.getNotesByBookId(b.getBookId()));
-                    ViewModelList.add(bvm);
+                    if(client.getNotesByBookId(b.getBookId()) == null){
+                        //do nothing
+                    }else{
+                        bvm.setNoteList(client.getNotesByBookId(b.getBookId()));
+
+                    }
+                    viewModelList.add(bvm);
                 });
-        return ViewModelList;
+
+        return viewModelList;
 
     }
 
