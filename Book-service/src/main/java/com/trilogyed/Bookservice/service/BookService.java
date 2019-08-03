@@ -117,8 +117,10 @@ public class BookService {
 //            bookViewModel.setNoteList(noteList1);
             Thread.sleep(2000);
             bookViewModel.setNoteList(client.getNotesByBookId(bookViewModel.getBookId()));
-        }
+
             return bookViewModel;
+        }
+
 
     }
 
